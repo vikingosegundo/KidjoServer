@@ -1,0 +1,66 @@
+<script type="text/javascript" charset="utf-8">
+            window.onload = function () {
+                var r = Raphael("holder", 600, 600),
+                    R = 200,
+                    init = true,
+                    param = {stroke: "#fff", "stroke-width": 30},
+                    html = [
+                        document.getElementById("h"),
+                        document.getElementById("m"),
+                        document.getElementById("s"),
+                        document.getElementById("d"),
+                        document.getElementById("mnth"),
+                        document.getElementById("ampm")
+                    ];
+
+                var sec = r.path(["M", 300.001, 300.001 - R, "A", R, R, 0, 0, 1, 301, 300 - R].join(",")).attr(param);
+                R = 160;
+                var min = r.path(["M", 300.001, 300.001 - R, "A", R, R, 0, 0, 1, 301, 300 - R].join(",")).attr(param);
+                R = 120;
+                var hor = r.path(["M", 300.001, 300.001 - R, "A", R, R, 0, 0, 1, 301, 300 - R].join(",")).attr(param);
+                R = 80;
+                var day = r.path(["M", 300.001, 300.001 - R, "A", R, R, 0, 0, 1, 301, 300 - R].join(",")).attr(param);
+                R = 40;
+                var mon = r.path(["M", 300.001, 300.001 - R, "A", R, R, 0, 0, 1, 301, 300 - R].join(",")).attr(param);
+                var pm = r.circle(300, 300, 16).attr({stroke: "none", fill: Raphael.hsb2rgb(15 / 200, 1, .75).hex});
+                html[5].style.color = Raphael.hsb2rgb(15 / 200, 1, .75).hex;
+
+                function updateVal(value, total, R, hand, id) {
+                    var alpha = 360 / total * value,
+                        a = (90 - alpha) * Math.PI / 180,
+                        x = 300 + R * Math.cos(a),
+                        y = 300 - R * Math.sin(a),
+                        color = "hsb(".concat(Math.round(R) / 200, ",", value / total, ", .75)"),
+                        path;
+                    if (total == value) {
+                        path = ["M", 300.001, 300.001 - R, "A", R, R, 0, 1, 1, 299.99, 300.001 - R].join();
+                    } else {
+                        path = ["M", 300.001, 300.001 - R, "A", R, R, 0, +(alpha > 180), 1, x, y].join();
+                    }
+                    x = x == 300 ? 301 : x;
+                    if (total == value || init || !value) {
+                        hand.attr({stroke: color, path: path});
+                    } else {
+                        hand.animate({stroke: color, path: path}, 1000);
+                    }
+                    html[id].innerHTML = (value < 10 ? "0" : "") + value;
+                    html[id].style.color = Raphael.getRGB(color).hex;
+                }
+
+                (function () {
+                    var d = new Date;
+                    var am = (d.getHours() < 12);
+                    var h = d.getHours() % 12 || 12;
+                    updateVal(d.getSeconds(), 60, 200.001, sec, 2);
+                    updateVal(d.getMinutes(), 60, 160.001, min, 1);
+                    updateVal(h, 12, 120.001, hor, 0);
+                    updateVal(d.getDate(), 31, 80.001, day, 3);
+                    updateVal(d.getMonth() + 1, 12, 40.001, mon, 4);
+                    pm[(am ? "hide" : "show")]();
+                    html[5].innerHTML = am ? "AM" : "PM";
+                    // r.safari();
+                    setTimeout(arguments.callee, 1000);
+                    init = false;
+                })();
+            };
+        </script>
