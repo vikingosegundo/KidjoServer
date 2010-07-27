@@ -30,20 +30,7 @@
 		
 		
 	}
-//	NSString *path = [root stringByAppendingPathComponent:@"P1.png"];
-//	if(![fileManager fileExistsAtPath:path])
-//	{
-//		NSData *data = [NSData dataWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"P1.png_p"]];
-//		[data writeToFile:path atomically:YES];
-//	}
-//	
-//	path = [root stringByAppendingPathComponent:@"favicon.ico"];
-//	if(![fileManager fileExistsAtPath:path])
-//	{
-//		NSData *data = [NSData dataWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"favicon.ico"]];
-//		[data writeToFile:path atomically:YES];
-//	}
-//	
+
 	server = [KidjoServer new];
 	[server setConnectionClass:[KidjoHTTPConnection class]];
 	[server setDocumentRoot:[NSURL fileURLWithPath:root]];
@@ -53,9 +40,13 @@
 	KidjoViews *kidjoView =[[KidjoViews alloc] init];
 	
 	KidjoURLDispatcher *dispatcher = server.dispatcher;
-	[dispatcher registerScheme:@"^/favicon.ico" toController:kidjoView andSelector:@"favicon:"];
+	
+    [dispatcher registerScheme:@"^/favicon.ico" toController:kidjoView andSelector:@"favicon:"];
+    
 	[dispatcher registerScheme:@"^/reports/.*" toController:kidjoView andSelector:@"allReports:"];
+    
 	[dispatcher registerScheme:@"^/files/(.*)$" toController:kidjoView andSelector:@"files:"];
+
 	[dispatcher registerScheme:@"^/([a-zA-Z]+)/([a-zA-Z]+)(.*)$" toController:kidjoView andSelector:@"halloWelt:"];
 	
 	[dispatcher registerScheme:@"^/$" toController:kidjoView andSelector:@"index:"];
