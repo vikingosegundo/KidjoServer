@@ -23,7 +23,10 @@
 
 - (UInt64)contentLength
 {
-	NSDictionary *fileAttributes = [[NSFileManager defaultManager] fileAttributesAtPath:filePath traverseLink:NO];
+    NSError *error=nil;
+	//NSDictionary *fileAttributes = [[NSFileManager defaultManager] fileAttributesAtPath:filePath traverseLink:NO];
+    
+    NSDictionary *fileAttributes =[[NSFileManager defaultManager] attributesOfItemAtPath:filePath error:&error];
 	
 	NSNumber *fileSize = [fileAttributes objectForKey:NSFileSize];
 	

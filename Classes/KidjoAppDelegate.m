@@ -24,9 +24,9 @@
 	root = [root stringByAppendingPathComponent:@"kidjo"];
 	
 	NSFileManager *fileManager = [NSFileManager defaultManager];
-	
+	NSError *error = nil;
 	if(![fileManager fileExistsAtPath:root]){
-		[fileManager createDirectoryAtPath:root attributes:nil];
+		[fileManager createDirectoryAtPath:root withIntermediateDirectories:YES attributes:nil error:&error];
 		
 		
 	}
@@ -45,16 +45,16 @@
     
 	[dispatcher registerScheme:@"^/reports/.*" toController:kidjoView andSelector:@"allReports:"];
     
-	[dispatcher registerScheme:@"^/files/(.*)$" toController:kidjoView andSelector:@"files:"];
+	[dispatcher registerScheme:@"^/files/.+$" toController:kidjoView andSelector:@"files:"];
 
 	[dispatcher registerScheme:@"^/([a-zA-Z]+)/([a-zA-Z]+)(.*)$" toController:kidjoView andSelector:@"halloWelt:"];
 	
 	[dispatcher registerScheme:@"^/$" toController:kidjoView andSelector:@"index:"];
-	[dispatcher registerScheme:@"^/(.+)$" toController:kidjoView andSelector:@"fallback:"];
+	[dispatcher registerScheme:@"^.*$" toController:kidjoView andSelector:@"fallback:"];
 	
 	
 	
-	NSError *error=nil;
+	error=nil;
 	if (![server start:&error]) {
 		TTDERROR(@"server not started: %@", error);
 	}

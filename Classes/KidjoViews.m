@@ -46,7 +46,7 @@
 
 -(NSString *)fallback:(NSArray *)data
 {
-	return @"";
+	return [self index:data];
 }
 
 -(NSString *)allReports:(NSArray *)data

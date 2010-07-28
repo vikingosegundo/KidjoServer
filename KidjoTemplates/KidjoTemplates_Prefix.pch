@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'KidjoTemplates' target in the 'KidjoTemplates' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
+

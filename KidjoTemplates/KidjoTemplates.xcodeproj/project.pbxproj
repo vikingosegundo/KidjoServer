@@ -1,0 +1,214 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		64B1BF8F11FF37DF00D1B28E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64B1BF8E11FF37DF00D1B28E /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		64B1BF8C11FF37DF00D1B28E /* libKidjoTemplates.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKidjoTemplates.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		64B1BF8E11FF37DF00D1B28E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		64B1BF9011FF37DF00D1B28E /* KidjoTemplates_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KidjoTemplates_Prefix.pch; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		64B1BF8911FF37DF00D1B28E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64B1BF8F11FF37DF00D1B28E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		64B1BF7E11FF37DF00D1B28E = {
+			isa = PBXGroup;
+			children = (
+				64B1BF8511FF37DF00D1B28E /* Classes */,
+				64B1BF8611FF37DF00D1B28E /* Other Sources */,
+				64B1BF8711FF37DF00D1B28E /* Frameworks */,
+				64B1BF8D11FF37DF00D1B28E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		64B1BF8511FF37DF00D1B28E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		64B1BF8611FF37DF00D1B28E /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				64B1BF9011FF37DF00D1B28E /* KidjoTemplates_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		64B1BF8711FF37DF00D1B28E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				64B1BF8E11FF37DF00D1B28E /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		64B1BF8D11FF37DF00D1B28E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				64B1BF8C11FF37DF00D1B28E /* libKidjoTemplates.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		64B1BF8A11FF37DF00D1B28E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		64B1BF8B11FF37DF00D1B28E /* KidjoTemplates */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64B1BF9311FF37DF00D1B28E /* Build configuration list for PBXNativeTarget "KidjoTemplates" */;
+			buildPhases = (
+				64B1BF8811FF37DF00D1B28E /* Sources */,
+				64B1BF8911FF37DF00D1B28E /* Frameworks */,
+				64B1BF8A11FF37DF00D1B28E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KidjoTemplates;
+			productName = KidjoTemplates;
+			productReference = 64B1BF8C11FF37DF00D1B28E /* libKidjoTemplates.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		64B1BF8011FF37DF00D1B28E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = apparatschik;
+			};
+			buildConfigurationList = 64B1BF8311FF37DF00D1B28E /* Build configuration list for PBXProject "KidjoTemplates" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 64B1BF7E11FF37DF00D1B28E;
+			productRefGroup = 64B1BF8D11FF37DF00D1B28E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				64B1BF8B11FF37DF00D1B28E /* KidjoTemplates */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		64B1BF8811FF37DF00D1B28E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		64B1BF9111FF37DF00D1B28E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.0;
+			};
+			name = Debug;
+		};
+		64B1BF9211FF37DF00D1B28E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.0;
+			};
+			name = Release;
+		};
+		64B1BF9411FF37DF00D1B28E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DSTROOT = /tmp/KidjoTemplates.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = KidjoTemplates_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = KidjoTemplates;
+			};
+			name = Debug;
+		};
+		64B1BF9511FF37DF00D1B28E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DSTROOT = /tmp/KidjoTemplates.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = KidjoTemplates_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = KidjoTemplates;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		64B1BF8311FF37DF00D1B28E /* Build configuration list for PBXProject "KidjoTemplates" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64B1BF9111FF37DF00D1B28E /* Debug */,
+				64B1BF9211FF37DF00D1B28E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64B1BF9311FF37DF00D1B28E /* Build configuration list for PBXNativeTarget "KidjoTemplates" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64B1BF9411FF37DF00D1B28E /* Debug */,
+				64B1BF9511FF37DF00D1B28E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 64B1BF8011FF37DF00D1B28E /* Project object */;
+}
