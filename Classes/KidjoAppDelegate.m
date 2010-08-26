@@ -26,39 +26,28 @@
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	NSError *error = nil;
 	if(![fileManager fileExistsAtPath:root]){
-		[fileManager createDirectoryAtPath:root withIntermediateDirectories:YES attributes:nil error:&error];
-		
-		
+		[fileManager createDirectoryAtPath:root withIntermediateDirectories:YES attributes:nil error:&error];   
 	}
 
 	server = [KidjoServer new];
-	[server setConnectionClass:[KidjoHTTPConnection class]];
-	[server setDocumentRoot:[NSURL fileURLWithPath:root]];
-	[server setPort:50001];
+    [server setConnectionClass:[KidjoHTTPConnection class]];
+    [server setDocumentRoot:[NSURL fileURLWithPath:root]];
+    [server setPort:50001];
 	[server setType:@"_http._tcp."];
 	[server setName:@"Kidjo"];
 	KidjoViews *kidjoView =[[KidjoViews alloc] init];
-	
-	KidjoURLDispatcher *dispatcher = server.dispatcher;
-	
-    [dispatcher registerScheme:@"^/favicon.ico" toController:kidjoView andSelector:@"favicon:"];
-    
-	[dispatcher registerScheme:@"^/reports/.*" toController:kidjoView andSelector:@"allReports:"];
-    
-	[dispatcher registerScheme:@"^/files/.+$" toController:kidjoView andSelector:@"files:"];
-
-	[dispatcher registerScheme:@"^/([a-zA-Z]+)/([a-zA-Z]+)(.*)$" toController:kidjoView andSelector:@"halloWelt:"];
-	
-	[dispatcher registerScheme:@"^/$" toController:kidjoView andSelector:@"index:"];
-	[dispatcher registerScheme:@"^.*$" toController:kidjoView andSelector:@"fallback:"];
-	
-	
+		
+    [server.dispatcher registerScheme:@"^/favicon.ico" toController:kidjoView andSelector:@"favicon:"];
+	[server.dispatcher registerScheme:@"^/reports/.*" toController:kidjoView andSelector:@"allReports:"];
+	[server.dispatcher registerScheme:@"^/files/.+$" toController:kidjoView andSelector:@"files:"];
+	[server.dispatcher registerScheme:@"^/([a-zA-Z]+)/([a-zA-Z]+)(.*)$" toController:kidjoView andSelector:@"halloWelt:"];
+	[server.dispatcher registerScheme:@"^/$" toController:kidjoView andSelector:@"index:"];
+	[server.dispatcher registerScheme:@"^.*$" toController:kidjoView andSelector:@"fallback:"];
 	
 	error=nil;
 	if (![server start:&error]) {
 		TTDERROR(@"server not started: %@", error);
 	}
-	
 	
     [window addSubview:viewController.view];
     [window makeKeyAndVisible];
