@@ -35,7 +35,6 @@
 	//[webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://taz.de/"]]];
 	[webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://localhost:50001/"]]];
 	[self.view addSubview:webView];
-	
 }
 
 

@@ -92,6 +92,7 @@
 		642D3C5A11C9595500A2411C /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
 		642D3C5C11C959D400A2411C /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		642D3C5E11C959F300A2411C /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
+		646C4A931227F26B00095AB1 /* favicon2.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = favicon2.ico; sourceTree = "<group>"; };
 		64D4F90411CB42550033AD6F /* KidjoTemplateEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KidjoTemplateEngine.h; sourceTree = "<group>"; };
 		64D4F90511CB42550033AD6F /* KidjoTemplateEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KidjoTemplateEngine.m; sourceTree = "<group>"; };
 		64D4FBC111CD19C60033AD6F /* P1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = P1.png; sourceTree = "<group>"; };
@@ -166,6 +167,7 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				646C4A931227F26B00095AB1 /* favicon2.ico */,
 				64D4FBC311CD1AB50033AD6F /* favicon.ico */,
 				64D4FBC111CD19C60033AD6F /* P1.png */,
 				32CA4F630368D1EE00C91783 /* Kidjo_Prefix.pch */,
@@ -268,7 +270,6 @@
 			isa = PBXProject;
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Kidjo" */;
 			compatibilityVersion = "Xcode 3.1";
-			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				en,

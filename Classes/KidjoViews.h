@@ -17,6 +17,6 @@
 -(NSString *)index:(NSArray *)data;
 -(NSString *)fallback:(NSArray *)data;
 -(NSString *)allReports:(NSArray *)data;
--(NSData *)files:(NSArray *)file;
+-(NSData *)files:(NSArray *)files;
 -(NSData *)favicon:(NSArray *) data;
 @end

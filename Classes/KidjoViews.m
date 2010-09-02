@@ -63,15 +63,15 @@
 	return [templateEngine templateForReports:(NSDictionary *)dict];
 }
 
--(NSData *)files:(NSArray *)file
+-(NSData *)files:(NSArray *)files
 {
 	TTDPRINT(@"%@", file);
 	NSString *root = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES) objectAtIndex:0];
 	root = [root stringByAppendingPathComponent:@"kidjo"];
-	if ([file count]>1) {
-		root = [root stringByAppendingPathComponent:[file objectAtIndex:1]];
+	if ([files count]>1) {
+		root = [root stringByAppendingPathComponent:[files objectAtIndex:1]];
 	} else {
-		root = [root stringByAppendingPathComponent:[file objectAtIndex:0]];
+		root = [root stringByAppendingPathComponent:[files objectAtIndex:0]];
 	}
 
 	if ([[NSFileManager defaultManager] fileExistsAtPath:root]) {
